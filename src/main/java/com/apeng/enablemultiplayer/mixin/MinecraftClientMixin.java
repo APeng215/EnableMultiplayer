@@ -12,8 +12,16 @@ import org.spongepowered.asm.mixin.injection.callback.CallbackInfoReturnable;
 public abstract class MinecraftClientMixin {
 
     @Inject(method = "isMultiplayerEnabled()Z", at = @At("HEAD"), cancellable = true)
-    private void injectMethod(CallbackInfoReturnable<Boolean> cir) {
-        cir.setReturnValue(((MinecraftClientAccessor)this).getMultiplayerEnabled());
+    private void injectMultiplayerMethod(CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(true);
         cir.cancel();
     }
+
+    @Inject(method = "isOnlineChatEnabled()Z", at = @At("HEAD"), cancellable = true)
+    private void injectOnlineChatMethod(CallbackInfoReturnable<Boolean> cir) {
+        cir.setReturnValue(true);
+        cir.cancel();
+    }
+
+
 }

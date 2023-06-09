@@ -14,9 +14,6 @@
   "entrypoints": {
     "client": [
       "com.apeng.enablemultiplayer.EnableMultiplayerClient"
-    ],
-    "main": [
-      "com.apeng.enablemultiplayer.EnableMultiplayer"
     ]
   },
   "mixins": [
