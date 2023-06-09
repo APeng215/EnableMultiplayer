@@ -1,0 +1,30 @@
+{
+  "schemaVersion": 1,
+  "id": "enable-multiplayer",
+  "version": "0.0.1",
+  "name": "EnableMultiplayer",
+  "description": "",
+  "authors": [
+    "A_Peng215"
+  ],
+  "contact": {},
+  "license": "LGPL-3.0",
+  "icon": "assets/enableMultiplayer/icon.png",
+  "environment": "*",
+  "entrypoints": {
+    "client": [
+      "com.apeng.enablemultiplayer.EnableMultiplayerClient"
+    ],
+    "main": [
+      "com.apeng.enablemultiplayer.EnableMultiplayer"
+    ]
+  },
+  "mixins": [
+    "enable-multiplayer.mixins.json"
+  ],
+  "depends": {
+    "fabricloader": "*",
+    "fabric": "*",
+    "minecraft": "1.16.5"
+  }
+}
